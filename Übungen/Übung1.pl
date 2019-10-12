@@ -67,4 +67,16 @@ kante(b,d).
 %   weg(X,Y), das ein Wert true genau dann liefer, wenn man von X nach Y über einen gerichteten Weg kommt.
 %   Also z.B. liefern weg(a,c) und weg(a,a) den wert True und weg(b,a) den Wert false.
 
+%weg(X,Y) X->Y
+weg(X,X).
+weg(X,Y) :- kante(X,HZwischen), weg(HZwischen,Y).
+
+%c) Erweitern Sie Ihr Prolog-Programm aus b) durch Hinzunahme von Regeln um ein Prädikat wegLänge(X,Y,Länge) das n der 3. Komponente
+%   die Länge des gefundenen Weges als symbolische Zahl liefert.
+%   z.B. ist das Tupel (a,c,s(s(s(s(O)))) in der Relation wegLänge da es einen Weg von a nach c der länge 3 gibt 
+
+%wegLänge(X,Y,Länge) :- Der Weg von X nach Y wird in Länge gespeichert
+weglänge(X,X,o). %I.A.
+weglänge(X,Y,s(Länge)) :- kante(X,HZwischen), weglänge(HZwischen,Y,Länge).
+
 
