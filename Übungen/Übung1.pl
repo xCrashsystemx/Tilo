@@ -37,11 +37,15 @@ mult(s(X),Y,H) :-  add(Help,Y,H),mult(X,Y,Help).
 
 %Aufgabe 8
 %a) eqZero(X) -> X ist gleich 0
-
+eqZero(o).
 
 %b) neqZero(X) -> X ist ungleich 0
+neqZero(s(X)) :-natSym(X).
 
 %c)less(X,Y) -> X ist kleiner als Y
+less(X,Y) :- natSym(Y), natSym(X), add(X,H,Y), neqZero(H). 
 
 %d) square(X,Y) -> Y ist X^2
+%I.A.
+square(X,Y) :- natSym(X), natSym(Y), mult(X,X,Y).
 
