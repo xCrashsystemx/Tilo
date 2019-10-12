@@ -49,3 +49,22 @@ less(X,Y) :- natSym(Y), natSym(X), add(X,H,Y), neqZero(H).
 %I.A.
 square(X,Y) :- natSym(X), natSym(Y), mult(X,X,Y).
 
+%Aufgabe 9 
+%a) Stellen Sie obigen Graph als Prolog Programm dar
+%kante(X,Y) :- X geht nach Y
+kante(b,c).
+kante(a,b).
+kante(a,e).
+kante(e,d).
+kante(a,d).
+kante(a,c).
+kante(b,e).
+kante(c,d).
+kante(e,c).
+kante(b,d).
+
+%b) Erweitern Sie Ihr Prolog-Programm aus a) durch Hinzunahme von Regeln um ein Prädikat
+%   weg(X,Y), das ein Wert true genau dann liefer, wenn man von X nach Y über einen gerichteten Weg kommt.
+%   Also z.B. liefern weg(a,c) und weg(a,a) den wert True und weg(b,a) den Wert false.
+
+
