@@ -5,11 +5,10 @@
 
 %add(X,Y,H) = X+Y= H 
 
-add(o,o,o). %I.A. 0+0=0
 add(o,X,X). % 0 + 1 = 1
 add(s(X),Y,s(H)) :- add(X,Y,H). %I.S.
 
-% b) Kann man dieses Programm auch für die Subtraktion verwenden? -> Ja Query -> add(s(o),X,s(s(o))).
+% b) Kann man dieses Programm auch für die Subtraktion verwenden? -> Ja Query -> add(s(o),Z,s(s(o))).
 % d.h. man kann eine Variabel in die ersten beiden schreiben und die letzte ausfüllen.
 
 
@@ -29,5 +28,20 @@ natSym(s(X)) :- natSym(X). %I.S.
 mult(o,X,o).
 mult(s(X),Y,H) :-  add(Help,Y,H),mult(X,Y,Help).
 
+%Aufgabe 7 
+% c) Geben Sie eine Induktive Definition für die Höhe eines Termes an. Dabei ist die Höhe die Anzahl der Kanten auf dem längsten Ast.
+%height(N) -> N gleich die Höhe
+%height(N) = 0, wenn N eine Variabel oder Konstante ist.
+%height(N) 1 + ..... wenn N funktoren besitzt 
 
+
+%Aufgabe 8
+%a) eqZero(X) -> X ist gleich 0
+
+
+%b) neqZero(X) -> X ist ungleich 0
+
+%c)less(X,Y) -> X ist kleiner als Y
+
+%d) square(X,Y) -> Y ist X^2
 
