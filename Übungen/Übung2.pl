@@ -13,11 +13,13 @@ exp(o,Y,o).
 %I.S.
 exp(X,s(Y),R) :- exp(X,Y,H), mult(H,X,R).
 
-
-
 %b) Kann man dieses Programm auch für den Logarithmus verwenden?
 %Wenn ja, implementieren Sie unter Verwendung der Relation aus a) eine Relation, die den Logarithmus zu einer 
 %einzugebenden Basis berechnet.
+
+%exp(Y,R,X) 
+%log(X,B,R) :- B ist die Basis von X = R
+logi(X,B,R) :- exp(B,R,X).
 
 %c) Kann man in Ihren Prolog-Relationen aus a) und b) auch andere Termine als natürliche Zahlen
 %in Symbolischer Darstellung verwenden?
