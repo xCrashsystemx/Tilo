@@ -2,6 +2,18 @@
 %a) Geben Sie ein Prolog Programm an, das die Exponentiation auf den natürlichen Zahlen in
 %symbolischer Darstellung implementiert. D.h.: es soll die Funktion exp(a,b) = a^b
 %implementiert werden. (Sie können hierzu add und mult verwenden!).
+%mult(X,Y,H) X * Y = H
+mult(o,X,o).
+mult(s(X),Y,H) :-  add(Help,Y,H),mult(X,Y,Help).
+%exp(X,Y,R) = X hoch Y = R
+exp(X,o,s(o)).
+exp(o,Y,o).
+
+%3^4 = 3* 3 * 3 * 3
+%I.S.
+exp(X,s(Y),R) :- exp(X,Y,H), mult(H,X,R).
+
+
 
 %b) Kann man dieses Programm auch für den Logarithmus verwenden?
 %Wenn ja, implementieren Sie unter Verwendung der Relation aus a) eine Relation, die den Logarithmus zu einer 
