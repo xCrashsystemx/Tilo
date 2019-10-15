@@ -30,8 +30,9 @@ logi(X,B,R) :- exp(B,R,X).
 %Aufgabe 10
 %a) Implementieren Sie eine 1stellige Typrelation natList, die Listen von natürlichen Zahlen in
 %symbolischer Darstellung enthält.
-
-
+%I.A
+natList(nil).
+natList(list(X,Xs)) :-  nat(X), natList(Xs).
 
 %b) Geben Sie ein Prolog-Programm an, das eine 1-stellige Relation invList definiert, die Listen
 % der ersten n natürlichen Zahlen in symbolischer Darstellung und umgedrehter Reihenfolge enthält,
