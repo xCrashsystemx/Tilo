@@ -24,10 +24,14 @@ logi(X,B,R) :- exp(B,R,X).
 %c) Kann man in Ihren Prolog-Relationen aus a) und b) auch andere Termine als natürliche Zahlen
 %in Symbolischer Darstellung verwenden?
 %Wenn ja wie kann man das verhindern?
+%Ja, man muss die Prolog programme nur mit NatSym erweitern
+
 
 %Aufgabe 10
 %a) Implementieren Sie eine 1stellige Typrelation natList, die Listen von natürlichen Zahlen in
 %symbolischer Darstellung enthält.
+
+
 
 %b) Geben Sie ein Prolog-Programm an, das eine 1-stellige Relation invList definiert, die Listen
 % der ersten n natürlichen Zahlen in symbolischer Darstellung und umgedrehter Reihenfolge enthält,
